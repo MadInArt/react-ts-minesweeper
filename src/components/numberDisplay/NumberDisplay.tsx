@@ -1,5 +1,5 @@
 import React from "react";
-import { NumberDisplayContainer } from "./NumberDisplay.styles";
+import './numberDisplay.css'
 
 interface NumberDisplayProps {
   value: number;
@@ -7,11 +7,11 @@ interface NumberDisplayProps {
 
 const NumberDisplay: React.FC<NumberDisplayProps> = ({ value }) => {
   return (
-    <NumberDisplayContainer>
+    <div className='NumberDisplay'>
       {value < 0
         ? `-${Math.abs(value).toString().padStart(2, "0")}`
         : value.toString().padStart(3, "0")}
-    </NumberDisplayContainer>
+    </div>
   );
 };
 

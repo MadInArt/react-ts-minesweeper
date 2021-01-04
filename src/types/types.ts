@@ -8,8 +8,9 @@ export enum CellValue {
   six,
   seven,
   eight,
-  bomb,
+  bomb
 }
+
 export enum CellState {
   open,
   visible,
@@ -23,4 +24,4 @@ export enum Emoji {
   winner = "😎",
 }
 
-export type Cell = { value: CellValue; state: CellState };
+export type Cell = { value: CellValue; state: CellState, red?: boolean};

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,cAAc,CAAC;EACX,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,OAAO;EACd,UAAU,EAAE,KAAK;EACjB,UAAU,EAAE,MAAM;EAClB,SAAS,EAAE,IAAI;CAChB",
+    "sources": [
+        "numberDisplay.scss"
+    ],
+    "names": [],
+    "file": "numberDisplay.css"
+}
