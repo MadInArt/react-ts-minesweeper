@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import { generateCells } from "../../utils/utils";
+import { generateCells, openMultipleCells } from "../../utils/utils";
 import NumberDisplay from "../numberDisplay/NumberDisplay";
 import CellButton from "../cellButton/cellButton";
 import { AppContainer, AppHeader, AppBody, SmileContainer } from "./App.styles";
@@ -49,7 +49,23 @@ const App: React.FC = () => {
     if (!live) {
       setLive(true);
     }
-  };
+  const currentCell = cells[rowParam][columnParam];
+  let newCells = cells.slice();
+
+    if ([CellState.flagged, CellState.visible].includes(currentCell.state)){
+      return;
+    }
+
+  if(currentCell.value === CellValue.bomb){
+
+  } else if ( currentCell.value  === CellValue.none){
+      newCells = openMultipleCells(newCells, rowParam, columnParam);
+      setCells(newCells)
+  } else{
+    newCells[rowParam][columnParam].state = CellState.visible;
+    setCells(newCells)
+  }}
+
   const handleCellContext = (rowParam: number, columnParam: number) => (
     e: React.MouseEvent<HTMLDivElement, MouseEvent>
   ): void => {
@@ -114,5 +130,4 @@ const App: React.FC = () => {
     </AppContainer>
   );
 };
-
 export default App;
