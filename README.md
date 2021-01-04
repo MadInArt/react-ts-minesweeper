@@ -1,6 +1,7 @@
 # Brief description of the project
 
-This simple project - famous game called minesweeper was built to demonstrate skills of using React+TypeScript, for styling I've chosen CSS-in-JS -- styled-components library. I like this approach of styling because it allows to make .jsx file cleaner, by removing all these classNames out.
+This simple project - famous game called minesweeper was built to demonstrate skills of using React+TypeScript, for styling I've chosen SASS approach of styling. Used Hooks: useState and useEffect.
+
 
 ## Available Scripts
 
