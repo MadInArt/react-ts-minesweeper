@@ -1,17 +1,24 @@
 import React, { useState } from "react";
 
-import { generateCells } from "../../utils/index";
+import { generateCells } from "../../utils/utils";
 import NumberDisplay from "../numberDisplay/NumberDisplay";
 import CellButton from "../cellButton/cellButton";
 import { AppContainer, AppHeader, AppBody, SmileContainer } from "./App.styles";
+import { CellState, CellValue } from "../../types/types";
 
 const App: React.FC = () => {
   const [cells, setSells] = useState(generateCells());
-
+  console.log(cells);
   const renderCells = (): React.ReactNode => {
     return cells.map((row, rowIndex) =>
-      row.map((cell, cellIndex) => (
-        <CellButton key={`${rowIndex}-${cellIndex}`} />
+      row.map((cell, columnIndex) => (
+        <CellButton
+          key={`${rowIndex}-${columnIndex}`}
+          state={cell.state}
+          value={cell.value}
+          row={rowIndex}
+          column={columnIndex}
+        />
       ))
     );
   };

@@ -52,4 +52,11 @@ export const SmileContainer = styled.div`
   border-left-color: white;
   border-top-color: white;
   cursor: pointer;
+  &:active {
+    border-right-color: white;
+    border-bottom-color: white;
+    border-left-color: #7b7b7b;
+    border-top-color: #7b7b7b;
+  }
+
 `;

@@ -11,3 +11,4 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
+//finised stylings and generateCells logic

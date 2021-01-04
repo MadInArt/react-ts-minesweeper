@@ -9,4 +9,20 @@ export const CellButtonContainer = styled.div`
   border-bottom-color: #7b7b7b;
   border-left-color: white;
   border-top-color: white;
+  font-weight:bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  &:active {
+    border-right-color: white;
+    border-bottom-color: white;
+    border-left-color: #7b7b7b;
+    border-top-color: #7b7b7b;
+  }
+  span{
+    margin-left: 2px;
+    font-size:18px;
+  }
 `;

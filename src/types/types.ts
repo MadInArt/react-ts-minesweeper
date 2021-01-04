@@ -11,7 +11,7 @@ export enum CellValue {
   bomb,
 }
 export enum CellState {
-  opened,
+  open,
   visible,
   flagged,
 }
